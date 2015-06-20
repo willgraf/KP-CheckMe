@@ -467,3 +467,9 @@ footer {
     padding: 5px 0;
 }
 
+.template-box {
+	background-color: #EEEEEE;
+	max-width: 50%;
+	min-height: 80%;
+}
+
