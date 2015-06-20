@@ -139,7 +139,7 @@
 
 
 <div class="onoffswitch">
-    <input type="checkbox" name="nasal_congestion" class="onoffswitch-checkbox" id="myonoffswitchNose">
+    <input type="checkbox" name="nasal_congestion" class="onoffswitch-checkbox" id="myonoffswitchNose" onclick="nasal_congestion()">
     <label class="onoffswitch-label" for="myonoffswitchNose">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -215,12 +215,10 @@
 <script>
 
 
-
-function procress() {
-    console.log("will");
-    console.log(document.getElementById("myonoffswitchCough"));
-
+function nasal_congestion() {
+    document.getElementById('nasal_congestion').checked = true;
 }
+
 </script>
 
 </body>
