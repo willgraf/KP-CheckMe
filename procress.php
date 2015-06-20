@@ -2,8 +2,9 @@
 
 $nasal = $_POST['nasal_congestion'];
 $lastname = $_POST['lastname'];
-echo $lastname;
-echo "Yo";
-echo $nasal;
+
+if (isset($nasal)) {
+    echo "This var is set so I will print.";
+}
 
 ?>
