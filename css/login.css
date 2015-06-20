@@ -19,7 +19,7 @@ body:after {
             background-attachment:fixed;
             background-size:cover;
             opacity: 0.5;
-           top: 0;
+            top: 0;
             left: 0;
             bottom: 0;
             right: 0;
@@ -47,7 +47,7 @@ body ::-webkit-input-placeholder {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 2px #888888;
-  opacity: .4;
+  opacity: .7;
 }
 .wrapper.form-success .container h1 {
   -webkit-transform: translateY(85px);
