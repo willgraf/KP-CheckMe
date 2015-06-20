@@ -30,14 +30,15 @@
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "No";
+    content: "Yes";
     padding-left: 10px;
-    background-color: #34A7C1; color: #FFFFFF;
+    background-color: #32cd32; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "Yes";
+    content: "No";
     padding-right: 10px;
-    background-color: #32cd32; color: #FFFFFF;
+    
+    background-color: #34A7C1; color: #FFFFFF;
     text-align: right;
 }
 .onoffswitch-switch {
@@ -129,7 +130,7 @@
 
 
 <body>
-	<form class="form-container">
+	<div class="form-container">
 
   <input type="text" name="name" class="input" placeholder="Nombres"/>
   
@@ -138,7 +139,7 @@
 
 
 <div class="onoffswitch">
-    <input type="checkbox" name="nasal_congestion" class="onoffswitch-checkbox" id="myonoffswitchNose" checked>
+    <input type="checkbox" name="nasal_congestion" class="onoffswitch-checkbox" id="myonoffswitchNose">
     <label class="onoffswitch-label" for="myonoffswitchNose">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -147,7 +148,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Nasal Congestion</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchCough" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchCough">
     <label class="onoffswitch-label" for="myonoffswitchCough">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -156,7 +157,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Coughing</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchEyes" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchEyes">
     <label class="onoffswitch-label" for="myonoffswitchEyes">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -165,7 +166,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Itchy/Watery Eyes</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchSneeze" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchSneeze">
     <label class="onoffswitch-label" for="myonoffswitchSneeze">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -174,7 +175,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Sneezing</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFever" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFever">
     <label class="onoffswitch-label" for="myonoffswitchFever">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -183,7 +184,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Fever</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchThroat" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchThroat">
     <label class="onoffswitch-label" for="myonoffswitchThroat">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -192,7 +193,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Sore Throat</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFatigue" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFatigue">
     <label class="onoffswitch-label" for="myonoffswitchFatigue">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -201,7 +202,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Fatigue</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchHeadache" checked>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchHeadache">
     <label class="onoffswitch-label" for="myonoffswitchHeadache">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -210,11 +211,15 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Headache</h3>
 
   <input type="submit" class="input-submit" onclick="procress()" value="Submit" />
-  
+  </div>
 <script>
+
+
+
 function procress() {
     console.log("will");
-    console.log(document.getElementById("myonoffswitchNose").value);
+    console.log(document.getElementById("myonoffswitchCough"));
+
 }
 </script>
 
