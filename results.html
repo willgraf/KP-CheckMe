@@ -148,7 +148,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Nasal Congestion</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchCough">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchCough" onclick="coughing()">
     <label class="onoffswitch-label" for="myonoffswitchCough">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -157,7 +157,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Coughing</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchEyes">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchEyes" onclick="eyes()">
     <label class="onoffswitch-label" for="myonoffswitchEyes">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -166,7 +166,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Itchy/Watery Eyes</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchSneeze">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchSneeze" onclick="sneezing()">
     <label class="onoffswitch-label" for="myonoffswitchSneeze">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -175,7 +175,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Sneezing</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFever">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFever" onclick="fever()">
     <label class="onoffswitch-label" for="myonoffswitchFever">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -184,7 +184,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Fever</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchThroat">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchThroat" onclick="sore_throat()">
     <label class="onoffswitch-label" for="myonoffswitchThroat">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -193,7 +193,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Sore Throat</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFatigue">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchFatigue" onclick="fatigue()">
     <label class="onoffswitch-label" for="myonoffswitchFatigue">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -202,7 +202,7 @@
 <h3 style="float:right; margin-top:-35px; color:white;">Fatigue</h3>
 
 <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchHeadache">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchHeadache" onclick="headache()">
     <label class="onoffswitch-label" for="myonoffswitchHeadache">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -210,13 +210,52 @@
 </div>
 <h3 style="float:right; margin-top:-35px; color:white;">Headache</h3>
 
-  <input type="submit" class="input-submit" onclick="procress()" value="Submit" />
+  <input type="submit" class="input-submit" onclick="process()" value="Submit" />
   </div>
 <script>
 
 
 function nasal_congestion() {
-    document.getElementById('nasal_congestion').checked = true;
+    document.getElementById('myonoffswitchNose').checked = true;
+}
+
+function cough() {
+    document.getElementById('myonoffswitchCough').checked = true;
+}
+
+function eyes() {
+    document.getElementById('myonoffswitchEyes').checked = true;
+}
+
+function sneezing() {
+    document.getElementById('myonoffswitchSneeze').checked = true;
+}
+
+function fever() {
+    document.getElementById('myonoffswitchFever').checked = true;
+}
+
+function sore_throat() {
+    document.getElementById('myonoffswitchThroat').checked = true;
+}
+
+function fatigue() {
+    document.getElementById('myonoffswitchFatigue').checked = true;
+}
+
+function headache() {
+    document.getElementById('myonoffswitchHeadache').checked = true;
+}
+
+function process() {
+  console.log("Nasal Congestion: " + document.getElementById('myonoffswitchNose').checked);
+  console.log("Cough: " + document.getElementById('myonoffswitchCough').checked);
+  console.log("Eyes: " + document.getElementById('myonoffswitchEyes').checked);
+  console.log("Sneezing: " + document.getElementById('myonoffswitchSneeze').checked);
+  console.log("Fever: " + document.getElementById('myonoffswitchFever').checked);
+  console.log("Sore Throat: " + document.getElementById('myonoffswitchThroat').checked);
+  console.log("Fatigue: " + document.getElementById('myonoffswitchFatigue').checked);
+  console.log("Headache: " + document.getElementById('myonoffswitchHeadache').checked);
 }
 
 </script>
