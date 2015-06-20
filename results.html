@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<style>
+	$angleStart: -360deg;
+$buttonSize: 140px;
+$optionSize: 80px;
+$spacing: 20px;
+$speed: .8s;
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: linear-gradient(#eee, #ccc);
+    overflow: hidden;
+}
+
+.selector {
+    position: absolute;
+    left:50%; top:50%;
+    width:$buttonSize; height:$buttonSize;
+    margin-top: -$buttonSize/2;
+    margin-left: -$buttonSize/2;
+}
+
+.selector, .selector button {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+.selector button {
+    position: relative;
+    width:100%; height:100%;
+    padding: 10px;
+    background: #428bca;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    transition: all .1s;
+}
+.selector button:hover {
+    background: #3071a9;
+}
+.selector button:focus {
+    outline: none;
+}
+
+.selector ul {
+    position: absolute;
+    list-style: none;
+    padding:0; margin:0;
+    top:-$spacing; right:-$spacing; bottom:-$spacing; left:-$spacing;
+}
+
+.selector li {
+    position: absolute;
+    width:0; height: 100%;
+    margin: 0 50%;
+    -webkit-transform: rotate($angleStart);
+    transition: all $speed ease-in-out;
+}
+
+.selector li input {
+    display: none;
+}
+
+.selector li input + label {
+    position: absolute;
+    left:50%; bottom:100%;
+    width:0; height:0;
+    line-height: 1px;
+    margin-left: 0;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all $speed ease-in-out, color .1s, background .1s;
+}
+.selector li input + label:hover {
+    background: #f0f0f0;
+}
+.selector li input:checked + label {
+    background: #5cb85c;
+    color: white;
+}
+.selector li input:checked + label:hover {
+    background: #449d44;
+}
+.selector.open li input + label {
+    width:$optionSize; height:$optionSize;
+    line-height: $optionSize;
+    margin-left: -($optionSize/2);
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    font-size: 14px;
+}
+	</style>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<script>
+var nbOptions = 8;
+var angleStart = -360;
+
+// jquery rotate animation
+function rotate(li,d) {
+    $({d:angleStart}).animate({d:d}, {
+        step: function(now) {
+            $(li)
+               .css({ transform: 'rotate('+now+'deg)' })
+               .find('label')
+                  .css({ transform: 'rotate('+(-now)+'deg)' });
+        }, duration: 0
+    });
+}
+
+// show / hide the options
+function toggleOptions(s) {
+    $(s).toggleClass('open');
+    var li = $(s).find('li');
+    var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
+    for(var i=0; i<li.length; i++) {
+        var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
+        $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
+    }
+}
+
+$('.selector button').click(function(e) {
+    toggleOptions($(this).parent());
+});
+
+setTimeout(function() { toggleOptions('.selector'); }, 100);
+</script>
+
+<body>
+	<header id="top" class="header">
+	<div class="text-vertical-center">
+		<div class="selector">
+  <ul>
+    <li>
+      <input id="c1" type="checkbox"/>
+      <label for="c1">Option 1</label>
+    </li>
+    <li>
+      <input id="c2" type="checkbox"/>
+      <label for="c2">Option 2</label>
+    </li>
+    <li>
+      <input id="c3" type="checkbox"/>
+      <label for="c3">Option 3</label>
+    </li>
+    <li>
+      <input id="c4" type="checkbox"/>
+      <label for="c4">Option 4</label>
+    </li>
+    <li>
+      <input id="c5" type="checkbox"/>
+      <label for="c5">Option 5</label>
+    </li>
+    <li>
+      <input id="c6" type="checkbox"/>
+      <label for="c6">Option 6</label>
+    </li>
+    <li>
+      <input id="c7" type="checkbox"/>
+      <label for="c7">Option 7</label>
+    </li>
+    <li>
+      <input id="c8" type="checkbox"/>
+      <label for="c8">Option 8</label>
+    </li>
+  </ul>
+  <button>Click here</button>
+</div>
+	</div>
+	</header>
+
+</body>
+
+</html>
