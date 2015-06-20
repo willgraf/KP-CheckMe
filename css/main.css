@@ -6,207 +6,39 @@ body:after {
             background-attachment:fixed;
             background-size:cover;
             opacity: 0.5;
-           top: 0;
+            top: 0;
             left: 0;
             bottom: 0;
             right: 0;
             position: absolute;
             z-index: -1;
-        }
-
-.navbar-top{
-  top: 0;
-border-width: 0 0 1px;
-position: absolute;
-right: 0;
-left: 0;
-z-index: 1030;
-border-radius:0;
-}
-.dropdown-menu .sub-menu {
-    left: 100%;
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    margin-top: -1px;
-}
-
-.dropdown-menu li:hover .sub-menu {
-    visibility: visible;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
-    margin-top: 0;
-}
-
-.navbar .sub-menu:before {
-    border-bottom: 7px solid transparent;
-    border-left: none;
-    border-right: 7px solid rgba(0, 0, 0, 0.2);
-    border-top: 7px solid transparent;
-    left: -7px;
-    top: 10px;
-}
-.navbar .sub-menu:after {
-    border-top: 6px solid transparent;
-    border-left: none;
-    border-right: 6px solid #fff;
-    border-bottom: 6px solid transparent;
-    left: 10px;
-    top: 11px;
-    left: -6px;
-}
-/*END HEADER*/
-
-/*global*/
-.line{
-  border-left: 1px solid maroon;
-margin: 0 5px;
-padding: 0;
-/* float: left; */
-display: inline-block;
-height: 35px;
-vertical-align: middle;
-}
-.wrapper-header > h3{
-  position: relative;
-display:inline-block
-}
-.wrapper-header{
-  padding-left:8em;
-  margin-bottom:1.5em;
-  text-align:left;
-}
-
-.btn{
-  font-weight:400;
-}
-footer{
-  zoom:1;
-  overflow:hidden;
-  text-align:center;
-  background-image:url('http://www.2ndstagepartners.com/assets/footer-background-gray.jpg');
-  color:white;
-  font-weight:300;
-  border-top: 1px solid rgb(206, 206, 206);
-}
-.sitemap-span > a{
-  margin-left:1em;
-  margin-right:1em;
-  color:white;
-  font-weight:300;
-}
-.spacer{
-  padding:4em;
-}
-.spacer > img{
-  margin-left:auto;
-  margin-right:auto;
-}
-.copyright{
-  font-size:14px;
-}
-/*end global*/
-
-/*Index.html*/
-section{
-  zoom:1;
-  overflow:hidden;
-}
-
-.top-home {
-background-image: url('http://benkraw_bg.byethost32.com/webs/images/front.jpg');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 570px;
-width: 100%;
-color: #3c3c3c;
-padding-left: 3em;
-margin-top: 4%;
-}
-
-.top-home > h1{
-  padding-top: 6em;
-  font-weight:600;
-  text-shadow: 1px 1px 25px white;
-}
-.top-home > h4{
-  font-weight:400;
-  max-width: 65%;
-  text-shadow: 1px 1px 25px white;
 }
 
 
-/*END INDEX*/
-
-
-.cust-container {
-  margin-right: auto;
-  width: 75%;
-  zoom: 1;
-  overflow: hidden;
-  margin-bottom: 2%;
-  float: left;
-  margin-left: 2%;
-}
 
 .column{
   padding:0;
+  border-radius: 10px;
 }
-.above-top-framework{
-  padding-top:62px;
-  text-align:center;
-  padding-bottom:3em;
-  margin-top:2em;
-}
-.top-framework{
-  text-align:center;
-}
-.small-icons{
-  margin-left: auto;
-margin-right: auto;
-width: 70px;
-height: 70px;
-}
+
 .inner{
   padding: 40px 20px 40px;
   text-align:center;
   color:white;
 }
-.inner > img{
-  margin-left:auto;
-  margin-right:auto;
-  height: 120px;
+
+.first {
+	float: left;
 }
-.inner > p{
-  font-size:13px;
-}
-.inner > h2{
-  margin-bottom:20px;
-}
+
 .outer{
   background:#006BA6;
   height: 300px;
+  width: 400px;
 }
-.dot:before{
-  content:"";
-  position:absolute;
-  top:42%;
-  left:-3px;
-  width:9px;
-  height:9px;
-  background:#fff;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  margin:6px 0 0;
-}
+
 .dot:after{
-  content: "";
+content: "";
 position: absolute;
 top: 0;
 height: 9999px;
@@ -214,12 +46,6 @@ background: #f00;
 left: 0;
 border-left: 2px solid #fff;
 }
-
-
-input, textarea, button { margin-top:10px }
-
-
-
 
 
 /*--------Sean's Stuff--------------*/
