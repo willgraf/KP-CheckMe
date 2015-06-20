@@ -208,10 +208,17 @@
   </div>
 
 
-<div class="form-container results" style="margin-top:200px;">
+<div class="form-container results" style="margin-top:100px; width:700px !important;">
   <h3 style="text-align:center; color:white;">Diagnosis</h3>
   <hr>
-  <input style="text-align:center;" type="text" name="results_final" class="input" value="Sean Sucks!!!" readonly/>
+  <input style="text-align:center;" id="results_final" type="text" name="results_final" class="input" value="" readonly/>
+  <br>
+    <h3 style="text-align:center; color:white;">Based on your location you should call:</h3>
+    <hr>
+     <input style="text-align:center;" id="location" type="text" name="location" class="input" value="" readonly/>
+      <input style="text-align:center;" id="phone_num" type="text" name="phone_num" class="input" value="" readonly/>
+
+
   </div>
 
 <script>
@@ -249,7 +256,662 @@ function headache() {
     document.getElementById('myonoffswitchHeadache').checked = true;
 }
 
+
+
+$(".results").hide();
+
+$("#submit").click(function(){
+    $(".form-container").fadeOut();
+    $(".results").fadeIn();
+});
+
+var data = {
+  "KPFacilities": [
+    {
+      "zip": "94588",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": "9258475100",
+              "formattedPhNbr": "925-847-5100",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,local",
+              "label": "Operator information",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": "9258475050",
+              "formattedPhNbr": "925-847-5050",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "advice,appointment: cancel,appointment: new,english,information,local",
+              "label": "Appointment and Advice Call Center",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": "711",
+              "formattedPhNbr": "711 (TTY for the hearing speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+        "Home Health",
+        "Psychiatry",
+        "Allergy",
+        "Audiology",
+        "Dermatology",
+        "Food and Nutrition",
+        "Head and Neck Surgery",
+        "Hospice Home Care",
+        "Infectious Disease",
+        "Injection Clinics",
+        "Internal Medicine",
+        "Laboratory",
+        "Obstetrics Gynecology",
+        "Occupational Health",
+        "Ophthalmology",
+        "Optometry",
+        "Orthopedics Podiatry",
+        "Other Clinical Services",
+        "Pain Management Center",
+        "Pediatrics Teenage Medicine",
+        "Pharmacy",
+        "Radiology",
+        "Surgery",
+        "Travel Services",
+        "Urology",
+        "Physical, Occupational, Speech Therapy"
+      ],
+      "loc": [
+        "-121.92552",
+        "37.690556"
+      ],
+      "facility_type": "Medical Office Building",
+      "cpm_facilities": {
+        "cpm_facilityId": "PLS"
+      },
+      "facilityId": "100340",
+      "url": "http:kp.orgkpwebfacilitydirfacility.do?id=100340",
+      "address": {
+        "building_name": {
+           
+        },
+        "zip": "94588",
+        "street": "7601 Stoneridge Drive",
+        "state": "CA",
+        "address_last_updated": "2013-01-04T17:59:08Z",
+        "city": "Pleasanton"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94582 94566 94568 94583 94586 94552 94550 94542 94506 94544 94526 94541 94536 94543 94546 94587 94528 94540 94537 94555 94551 94538 94539 94545 94557 94578 94580 94560 94507 94579 94577 94617",
+      "search_keywords": "Pleasanton Medical Offices, Pleasanton, Stoneridge, 94588, diablo, Adult, Allergy, Injections, Audiology, Chronic, Cosmetic, Dermatology, Dietitian, EKG, Head, Neck, Home, hospice, Laboratory, Mental, Chemical, Minor, Injury, MIC, Occupational, Ophthalmology, Optical, Optometry, Orthopedics, Podiatry, Pediatrics, Pharmacy,Physical, Therapy, Radiology, Imaging, Surgery, Ultrasound, Urgent, Urology, Women, same day, vision",
+      "href": "regionsNCAfacilities100340",
+      "official_name": "Pleasanton Medical Offices",
+      "regionId": "NCA",
+      "distance": "1.4412633"
+    },
+    {
+      "zip": "94538",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": 5102483000,
+              "formattedPhNbr": "510-248-3000",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,local",
+              "label": "Operator\/Hospital",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 5102483055,
+              "formattedPhNbr": "510-248-3055",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "advice,appointment: follow-up,appointment: new,english,information,local",
+              "label": "Appointment and Advice Call Center",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 5106755959,
+              "formattedPhNbr": "510-675-5959",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "appointment: cancel,english,local",
+              "label": "Cancellations",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 711,
+              "formattedPhNbr": "711 (TTY for the hearing\/speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+        "Other Clinical Services",
+        "Other Clinical Services",
+        "Home Health",
+        "Hospice Home Care",
+        "Allergy",
+        "Cardiac Catheterization Laboratory",
+        "Cardiology",
+        "Dermatology",
+        "Emergency Department",
+        "Food and Nutrition",
+        "Gastroenterology",
+        "General",
+        "Head and Neck Surgery",
+        "Hospice Home Care",
+        "Infectious Disease",
+        "Injection Clinics",
+        "Internal Medicine",
+        "Laboratory",
+        "Neurology",
+        "Obstetrics\/Gynecology",
+        "Occupational Health",
+        "Ophthalmology",
+        "Optometry",
+        "Orthopedics\/Podiatry",
+        "Other Administrative Services",
+        "Other Clinical Services",
+        "Pain Management Center",
+        "Pediatrics\/Teenage Medicine",
+        "Pharmacy",
+        "Physical, Occupational, Speech Therapy",
+        "Psychiatry",
+        "Pulmonary Rehabilitation",
+        "Radiation Oncology",
+        "Radiology",
+        "Social Medicine",
+        "Surgery",
+        "Travel Services",
+        "Urology"
+      ],
+      "loc": [
+        -121.97576,
+        37.550926
+      ],
+      "facility_type": "Hospital",
+      "cpm_facilities": {
+        "cpm_facilityId": "FRE"
+      },
+      "facilityId": 100367,
+      "url": "http:\/\/kp.org\/kpweb\/facilitydir\/facility.do?id=100367",
+      "address": {
+        "building_name": {
+           
+        },
+        "zip": 94538,
+        "street": "39400 Paseo Padre Parkway",
+        "state": "CA",
+        "address_last_updated": "2011-05-17T18:50:46Z",
+        "city": "Fremont"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94539 94536 94537 94560 94555 94587 94586 95002 95035 95134 95056 94089 94035 94544 95164 94542 94088 94303 95132 94557 95161 94043 94042 94545 95101 95131 94086 94582 94039 95190 95152 94566 94041 94540 94085 94588 94302 95052 94301 94306",
+      "search_keywords": "Fremont medical center, fremont, paseo, padre, 94538, boscell, hospital, emergency, inpatient, urgent, adult, injection, travel, allergy, ambulatory, surgery, cardiology, gi, gastroenterology, head, neck, hiv, hospice, infectious, invitro, internal, laboratory, neurology, nutrition, ob\/gyn, obstetrics\/ gynecology, occupational, oncology, orthopedics, podiatry, spine, pediatrics, pharmacy, psychiatry, pulmonology, rehabilitation, radiology, rheumatology, sports, urology, vision, optometry",
+      "href": "\/regions\/NCA\/facilities\/100367",
+      "official_name": "Kaiser Permanente Fremont Medical Center and Offices",
+      "regionId": "NCA",
+      "distance": 8.599641
+    },
+    {
+      "zip": "94551",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": 9252432600,
+              "formattedPhNbr": "925-243-2600",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,local",
+              "label": "Operator",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 9252432700,
+              "formattedPhNbr": "925-243-2700",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "advice,appointment: cancel,appointment: new,english,local",
+              "label": "Appointment and Advice Call Center",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 711,
+              "formattedPhNbr": "711 (TTY for the hearing\/speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+        "Allergy",
+        "Eye Care Services",
+        "Food and Nutrition",
+        "General",
+        "Hospice Home Care",
+        "Injection Clinics",
+        "Internal Medicine",
+        "Laboratory",
+        "Obstetrics\/Gynecology",
+        "Occupational Health",
+        "Optometry",
+        "Other Clinical Services",
+        "Outpatient Infusion Center",
+        "Pain Management Center",
+        "Pediatrics\/Teenage Medicine",
+        "Pharmacy",
+        "Radiology"
+      ],
+      "loc": [
+        -121.7639,
+        37.699333
+      ],
+      "facility_type": "Medical Office Building",
+      "cpm_facilities": {
+        "cpm_facilityId": "LVM"
+      },
+      "facilityId": 100364,
+      "url": "http:\/\/kp.org\/kpweb\/facilitydir\/facility.do?id=100364",
+      "address": {
+        "building_name": {
+           
+        },
+        "zip": 94551,
+        "street": "3000 Las Positas Road",
+        "state": "CA",
+        "address_last_updated": "2013-01-04T17:53:42Z",
+        "city": "Livermore"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94550 95391 95378 94514 94566 94588 94582 95377 94568 94506 94586 94513 94583 95376",
+      "search_keywords": "Livermore Medical Offices, las positas, positas, livermore, kaiser, 94551, diablo, adult, allergy, case, care, management, chronic, gift, education, HIV, hospice, immunizations, injection, infusion, lab, laboratory, secretaries, occupational, optical, optometry, pediatrics, pharmacy, radiology, imaging, TTY, vision, women, minor, injury",
+      "href": "\/regions\/NCA\/facilities\/100364",
+      "official_name": "Livermore Medical Offices",
+      "regionId": "NCA",
+      "distance": 9.305135
+    },
+    {
+      "zip": "94545",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": 5107844000,
+              "formattedPhNbr": "510-784-4000",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,local",
+              "label": "Operator\/information",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 711,
+              "formattedPhNbr": "711 (TTY for the hearing\/speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+        "Other Clinical Services",
+        "Home Health",
+        "Hospice Home Care",
+        "Cardiology",
+        "Emergency Department",
+        "Endocrinology\/Diabetes",
+        "Food and Nutrition",
+        "Gastroenterology",
+        "Home Health",
+        "Infectious Disease",
+        "Internal Medicine",
+        "Laboratory",
+        "Nuclear Medicine",
+        "Obstetrics\/Gynecology",
+        "Other Administrative Services",
+        "Other Clinical Services",
+        "Pain Management Center",
+        "Pediatrics\/Teenage Medicine",
+        "Pharmacy",
+        "Physical, Occupational, Speech Therapy",
+        "Pulmonary Function Laboratory",
+        "Pulmonary Rehabilitation",
+        "Radiology",
+        "Surgery",
+        "Laboratory",
+        "Allergy",
+        "Dialysis Unit",
+        "Internal Medicine",
+        "Laboratory",
+        "Neurology",
+        "Pediatrics\/Teenage Medicine",
+        "Pharmacy",
+        "Urology"
+      ],
+      "loc": [
+        -122.09405,
+        37.63085
+      ],
+      "facility_type": "Hospital",
+      "cpm_facilities": {
+        "cpm_facilityId": "HAY"
+      },
+      "facilityId": 100361,
+      "url": "http:\/\/kp.org\/kpweb\/facilitydir\/facility.do?id=100361",
+      "address": {
+        "building_name": {
+           
+        },
+        "zip": 94545,
+        "street": "27400 Hesperian Blvd.",
+        "state": "CA",
+        "address_last_updated": "2013-04-09T20:34:54Z",
+        "city": "Hayward"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94557 94540 94544 94543 94541 94580 94542 94587 94579 94578 94555 94552 94546 94577 94537 94536 94560 94603 94614 94624 94617 94622 94605 94621 94538 94502 94065 94568 94404 94063 94613 94026 94583 94586 94620 94619 94588 94601 94582 94566",
+      "search_keywords": "Kaiser Permanente Hayward Medical Center, hesperian, Hayward, 94545, hospital, inpatient, emergency, admit, teen, advice, adult, alcohol, drug, allergy, cardiology, diabetes, gastroenterology, HIV, home, hospice, infectious, sleepy, hollow, laboratory, minor, nephrology, neurology, nuclear, nutrition, ob\/gyn, oncology, pain, pediatrics, injections, lactation, newborn, pharmacy, poison, preop, pulmonology, radiology, ultrasound, rehab, respiratory, spiritual, surgery, urgent, urology, wound",
+      "href": "\/regions\/NCA\/facilities\/100361",
+      "official_name": "Kaiser Permanente Hayward Medical Center",
+      "regionId": "NCA",
+      "distance": 9.3724575
+    },
+    {
+      "zip": "94587",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": 5106754010,
+              "formattedPhNbr": "510-675-4010",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "appointment: follow-up,appointment: new,english,local",
+              "label": "Advice (24 hours)\/ appointments",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 711,
+              "formattedPhNbr": "711 (TTY for the hearing\/speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+        "Infectious Disease",
+        "Other Administrative Services",
+        "Home Health",
+        "Hospice Home Care",
+        "Psychiatry",
+        "Audiology",
+        "Diagnostic Imaging\/Radiology",
+        "Head and Neck Surgery",
+        "Hearing",
+        "Injection Clinics",
+        "Internal Medicine",
+        "Laboratory",
+        "Occupational Health",
+        "Ophthalmology",
+        "Optometry",
+        "Other Administrative Services",
+        "Pharmacy",
+        "Physical, Occupational, Speech Therapy",
+        "Radiology",
+        "Travel Services",
+        "Dermatology",
+        "Orthopedics\/Podiatry",
+        "Other Clinical Services",
+        "Pharmacy",
+        "Physical Medicine and Rehabilitation",
+        "Physical, Occupational, Speech Therapy",
+        "Psychiatry",
+        "Radiology"
+      ],
+      "loc": [
+        -122.08324,
+        37.605686
+      ],
+      "facility_type": "Medical Office Building",
+      "cpm_facilities": {
+        "cpm_facilityId": "UNC"
+      },
+      "facilityId": 100358,
+      "url": "http:\/\/kp.org\/kpweb\/facilitydir\/facility.do?id=100358",
+      "address": {
+        "building_name": "Building A",
+        "zip": 94587,
+        "street": "3555 Whipple Road",
+        "state": "CA",
+        "address_last_updated": "2013-04-03T18:28:33Z",
+        "city": "Union City"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94555 94544 94537 94536 94557 94545 94560 94542 94540 94541 94543 94538 94552 94580 94539 94586 94579 94578 94546 94582 94566 94568 94588 94577 94026 94303 94063 94302 94065 94583 94301 95002 94603 94035 94617 94614 94404 94624 94027 94042",
+      "search_keywords": "Union City Medical Offices, Union, City, Whipple, 94587, audiology, chronic, cosmetic, dermatology, ekg, grief, head, neck, surgery, education, hearing, hiv, home, hospice, injection, internal, laboratory, occupational, orthopedics, pharmacy, physical, rehabilitation, therapy, wound, podiatry, psychiatry, radiology, security, speech, travel, vision, eye, ophthalmology, optical, optometry",
+      "href": "\/regions\/NCA\/facilities\/100358",
+      "official_name": "Union City Medical Offices",
+      "regionId": "NCA",
+      "distance": 9.488619
+    },
+    {
+      "zip": "94578",
+      "phone_numbers": {
+        "phone_group": {
+          "phone": [
+            {
+              "phone_number": 5104818575,
+              "formattedPhNbr": "510-481-8575",
+              "phone_type": "Local",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,local",
+              "label": "Information",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            },
+            {
+              "phone_number": 711,
+              "formattedPhNbr": "711 (TTY for the hearing\/speech impaired)",
+              "phone_type": "Local TTY",
+              "description": {
+                 
+              },
+              "phoneTags": "english,information,tty",
+              "label": "California Relay Service",
+              "vanity_number": {
+                 
+              },
+              "kp_hours": ""
+            }
+          ]
+        }
+      },
+      "department_types": [
+         
+      ],
+      "loc": [
+        -122.10798,
+        37.692062
+      ],
+      "facility_type": "Other",
+      "cpm_facilities": {
+        "cpm_facilityId": "SPA"
+      },
+      "facilityId": 100560,
+      "url": "http:\/\/kp.org\/kpweb\/facilitydir\/facility.do?id=100560",
+      "address": {
+        "building_name": {
+           
+        },
+        "zip": 94578,
+        "street": "1440 168th Ave.",
+        "state": "CA",
+        "address_last_updated": "2011-03-18T11:24:55Z",
+        "city": "San Leandro"
+      },
+      "servicearea_name": {
+         
+      },
+      "affiliated_facility": "No",
+      "related_zipcodes": "94580 94579 94577 94546 94543 94541 94540 94603 94617 94624 94605 94614 94545 94622 94621 94557 94542 94552 94544 94613 94619 94502 94620 94601 94602 94501 94587 94606 94556 94516 94555 94575 94583 94661 94610 94618 94660 94604 94649 94568",
+      "search_keywords": "Kaiser Permanente Post-Acute Care Center, Post, Acute, Care, Center, KPPACC, san, leandro, 94578, inpatient, skilled, nursing",
+      "href": "\/regions\/NCA\/facilities\/100560",
+      "official_name": "Kaiser Permanente Post-Acute Care Center (KPPACC)",
+      "regionId": "NCA",
+      "distance": 9.850567
+    }
+  ],
+  "StatusCode": "KPAPI-0000",
+  "StatusType": 201,
+  "StatusDesc": "EXECUTION SUCCEEDED"
+}
+
+var facilities = [];
+for(i=0;i<data['KPFacilities'].length;i++){
+  var place = data['KPFacilities'][i]['official_name'];
+  var numbers = [];
+  for(t=0;t<data['KPFacilities'][i]['phone_numbers']['phone_group']['phone'].length;t++){
+    var number = (data['KPFacilities'][i]['phone_numbers']['phone_group']['phone'][t]['formattedPhNbr']);
+    numbers.push(number);
+  }
+  facilities.push(place, numbers);
+}
+
 function process() {
+  alert("Please allow this application to share your location!");
+  if(document.getElementById('myonoffswitchFever').checked || document.getElementById('myonoffswitchThroat').checked){
+    document.getElementById("results_final").value = "Consult a doctor!";
+  }
+  else{
+    document.getElementById("results_final").value = "You may have allergies!";
+  }
+
+  for(i=0;i<facilities.length; i++){
+    console.log(facilities[i])
+  }
+  document.getElementById("location").value = facilities[2];
+  document.getElementById("phone_num").value = facilities[3][0] + ", " + facilities[3][1] + ", " + facilities[3][2];
+
+  
+  /*
   console.log("Nasal Congestion: " + document.getElementById('myonoffswitchNose').checked);
   console.log("Cough: " + document.getElementById('myonoffswitchCough').checked);
   console.log("Eyes: " + document.getElementById('myonoffswitchEyes').checked);
@@ -258,14 +920,9 @@ function process() {
   console.log("Sore Throat: " + document.getElementById('myonoffswitchThroat').checked);
   console.log("Fatigue: " + document.getElementById('myonoffswitchFatigue').checked);
   console.log("Headache: " + document.getElementById('myonoffswitchHeadache').checked);
+  */
 }
 
-$(".results").hide();
-
-$("#submit").click(function(){
-    $(".form-container").fadeOut();
-    $(".results").fadeIn();
-});
 
 </script>
 
