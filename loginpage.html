@@ -1,0 +1,35 @@
+<!-- <link rel="stylesheet" type="text/css" href="kp-main.css"> -->
+
+<div id="kp-signOn-mod" >
+	<div id="signedON">
+		<h2>Members sign on</h2>
+		<div id="signon-text-error" class="text-error" data-focus="first" role="heading" aria-level="4"></div>
+		<form id="memberSignOn" name="memberSignOn" action="/health/mycaresecure/dummy" method="post" data-validate="parsley" autocomplete="off">
+			<div class="control-group">
+				<label for="username" class="control-label offscreenText">User ID</label>
+				<div class="controls">
+					<input tabindex="1" class="kpHomeSignInput kpHomeSignUsername parsley-validated" id="username" name="username" type="text" maxlength="50" data-required="true" data-trigger="change" data-error-container="div#signon-text-error" data-required-message="Please enter a username and password" data-focus="second" placeholder="User ID" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=);" autocomplete="off">
+					<a tabindex="2" id="forgot_userID_link" href="/health/care/consumer/dis/forgotuserid" title="Forgot user ID">Forgot?</a>
+				</div>
+			</div>
+			<div class="control-group">
+			<label for="password" class="control-label offscreenText">Password</label>
+				<div class="controls">
+					<input tabindex="1" class="kpHomeSignInput kpHomeSignPass parsley-validated parsley-success" id="password" name="password" type="password" value="" maxlength="50" data-required="true" data-trigger="change" data-error-container="div#signon-text-error" data-required-message="Please enter a username and password" placeholder="Password" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=);" autocomplete="off">
+					<a tabindex="2" id="forgot_pass_link" href="/health/care/consumer/dis/forgotpassword" title="Forgot password">Forgot?</a>
+				</div>
+			</div>
+			<div id="signon_or_register">
+				<div class="divide_signon">
+					<input class="mainSignonBtn wppButton" tabindex="1" id="signonButton" name="signonButton" type="submit" value="Sign on">
+				</div>
+				<div class="divide_reg"><a id="kpHomeSignRegister" tabindex="3" href="/health/care/consumer/dis/registration">Register now</a></div>
+			</div>
+			<div id="kpHomeSignAgreement">
+				<p>
+				By signing on, you agree to our <br><a tabindex="2" href="/health/poc?uri=content:ancillary&amp;ctype=terms_conditions&amp;tid=WPP::KZ39WVLZT&amp;tname=site_context">Terms and Conditions</a> and <a tabindex="2" href="/health/poc?uri=center:privacy-statement">Privacy Statement</a>.
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
