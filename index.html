@@ -39,40 +39,10 @@
     </div>
     <div class="collapse navbar-collapse" style="background-color:white;">
       <ul id="top-nav" class="nav navbar-nav" style="float:right !important; margin-right:10px;">
-
-      <input type="button" id="login" class="btn-primary" value="Login" onclick="return change(this);" style="margin-right:10px; float:right !important;"/>
-      <li id="symptom" class="nav-list"><a href="#symptom">Symptom</a></li>
-      <li id="location" class="nav-list"><a href="#location">Location</a></li>
-
-<script type="text/javascript">
-function change( el )
-{
-    if ( el.value === "Login" )
-        el.value = "Logout";
-    else
-        el.value = "Login";
-}
-
- $(document).ready(function() {
- $('#location').hide(); 
- $('#symptom').hide();
-  $('#login').click(function() {
-   $('#location').show();
-   $('#symptom').show();
-   });
- });
-
-
-</script>
-
-
-
+      <li id="login" class="nav-list"><a href="login.html">Login</a></li>
       </ul>
     </div>
   </header>
-
-
-
     <section style="margin-top:50px;">
       <div style="" class="wrapper-header">
        <div style="clear: both"></div>
