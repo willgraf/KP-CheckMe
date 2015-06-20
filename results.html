@@ -210,8 +210,16 @@
 </div>
 <h3 style="float:right; margin-top:-35px; color:white;">Headache</h3>
 
-  <input type="submit" class="input-submit" onclick="process()" value="Submit" />
+  <input type="submit" id="submit" class="input-submit" onclick="process()" value="Submit" />
   </div>
+
+
+<div class="form-container results">
+  <h3 style="text-align:center; color:white;">Diagnosis</h3>
+  <hr>
+  <input type="text" name="results_final" class="input" value="Sean Sucks!!!" readonly/>
+  </div>
+
 <script>
 
 
@@ -258,10 +266,14 @@ function process() {
   console.log("Headache: " + document.getElementById('myonoffswitchHeadache').checked);
 }
 
+$(".results").hide();
+
+$("#submit").click(function(){
+    $(".form-container").fadeOut();
+    $(".results").fadeIn();
+});
+
 </script>
 
 </body>
-
-
-
 </html>
