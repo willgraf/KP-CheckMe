@@ -219,7 +219,7 @@
 
 
 <div class="form-container results" style="margin-top:50px; width:700px !important;">
-  <h3 style="text-align:center; color:white;">Diagnosis</h3>
+  <h3 style="text-align:center; color:white;">Preliminary Diagnosis:</h3>
   <hr>
   <input style="text-align:center;" id="results_final" type="text" name="results_final" class="input" value="" readonly/>
   <br>
@@ -909,7 +909,7 @@ for(i=0;i<data['KPFacilities'].length;i++){
 
 function process() {
   if(document.getElementById('myonoffswitchFever').checked || document.getElementById('myonoffswitchThroat').checked){
-    document.getElementById("results_final").value = "Consult a doctor!";
+    document.getElementById("results_final").value = "Based on your symptoms, you may need to consult a doctor";
       for(i=0;i<facilities.length; i++){
     console.log(facilities[i])
   }
@@ -918,9 +918,9 @@ function process() {
 
   }
   else{
-    document.getElementById("results_final").value = "You may have allergies";
-     document.getElementById("location").value = "Get some rest!";
-  document.getElementById("phone_num").value = "Please consider taking antihistamines";
+    document.getElementById("results_final").value = "Your symptoms indicate that you may have allergies.";
+     document.getElementById("location").value = "Over-the-counter medications can be obtained at a nearby drug store.";
+  document.getElementById("phone_num").value = "If your condition worsens significantly, please consult a doctor.";
 
   }
 
