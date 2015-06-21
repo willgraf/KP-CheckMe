@@ -18,7 +18,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 17
+    zoom: 13
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -28,12 +28,6 @@ function initialize() {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
-
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Current Location'
-      });
 
        var marker_current = new google.maps.Marker({
       position: pos,
