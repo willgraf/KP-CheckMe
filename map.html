@@ -87,9 +87,10 @@ var nw_kaiser = '<div id="content">'+
       title: 'Northwest D.C. Medical Office Bldg'
   });
 
-  google.maps.event.addListener(marker, 'click', function() {
+  /*google.maps.event.addListener(marker, 'click', function() {
     infowindow1.open(map,marker);
-  });
+  });*/
+  infowindow1.open(map,marker);
 
 
 
@@ -109,9 +110,11 @@ var nw_kaiser = '<div id="content">'+
       title: 'Kaiser Permanente Capitol Hill Medical Center'
   });
 
-  google.maps.event.addListener(marker1, 'click', function() {
+  /*google.maps.event.addListener(marker1, 'click', function() {
     infowindow2.open(map,marker1);
-  });
+  });*/
+  infowindow2.open(map,marker1);
+
 }
 
 function handleNoGeolocation(errorFlag) {
