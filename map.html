@@ -32,6 +32,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
+        content: 'Current Location'
       });
 
       map.setCenter(pos);
@@ -44,7 +45,6 @@ function initialize() {
   }
 
 
-/*NORTHWEST KAISER*/
 var nw_kaiser = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -64,9 +64,8 @@ var nw_kaiser = '<div id="content">'+
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
-/*NORTHWEST KAISER*/
 
-/*Southwest KAISER*/
+
   var sw_kaiser = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -86,10 +85,7 @@ var nw_kaiser = '<div id="content">'+
   google.maps.event.addListener(marker1, 'click', function() {
     infowindow.open(map,marker1);
   });
-  /*NORTHWEST KAISER*/
-
 }
-
 
 function handleNoGeolocation(errorFlag) {
   if (errorFlag) {
