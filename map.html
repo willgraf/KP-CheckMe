@@ -18,7 +18,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 17
+    zoom: 15
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -29,11 +29,22 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
+      var infowindow2 = new google.maps.InfoWindow({
         map: map,
         position: pos,
         content: 'Current Location'
       });
+
+      var marker_current = new google.maps.Marker({
+      position: pos,
+      map: map,
+      title: 'Current'
+  });
+
+      google.maps.event.addListener(marker_current, 'click', function() {
+    infowindow2.open(map,marker_current);
+  });
+
 
       map.setCenter(pos);
     }, function() {
