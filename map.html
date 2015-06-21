@@ -14,10 +14,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 
     <script>
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see a blank space instead of the map, this
-// is probably because you have denied permission for location sharing.
-
 var map;
 
 function initialize() {
@@ -36,7 +32,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        content: 'Current Location'
       });
 
       map.setCenter(pos);
@@ -47,6 +43,48 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+
+var nw_kaiser = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Northwest D.C. Medical Office Bldg</h3>'+
+      'Call: (202) 346 3000</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: nw_kaiser
+  });
+
+  var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(38.905439, -77.050399),
+      map: map,
+      title: 'Northwest D.C. Medical Office Bldg'
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+
+
+  var sw_kaiser = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Kaiser Permanente Capitol Hill Medical Center</h3>'+
+      'Call: (202) 419 6200</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: sw_kaiser
+  });
+
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(38.899527, -77.004008),
+      map: map,
+      title: 'Kaiser Permanente Capitol Hill Medical Center'
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker1);
+  });
 }
 
 function handleNoGeolocation(errorFlag) {
