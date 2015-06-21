@@ -43,7 +43,7 @@ function initialize() {
       '<h3 id="firstHeading" class="firstHeading">Current Location</h3>'+
       '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
+  var infowindow3 = new google.maps.InfoWindow({
       content: blah_kaiser
   });
 
@@ -55,7 +55,7 @@ function initialize() {
   });
 
   google.maps.event.addListener(marker2, 'click', function() {
-    infowindow.open(map,marker2);
+    infowindow3.open(map,marker2);
   });
 
       map.setCenter(pos);
@@ -77,7 +77,7 @@ var nw_kaiser = '<div id="content">'+
       '<h3 id="firstHeading" class="firstHeading">Northwest D.C. Medical Office Bldg</h3>'+
       'Call: (202) 346-3000</div>';
 
-  var infowindow = new google.maps.InfoWindow({
+  var infowindow1 = new google.maps.InfoWindow({
       content: nw_kaiser
   });
 
@@ -88,7 +88,7 @@ var nw_kaiser = '<div id="content">'+
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    infowindow1.open(map,marker);
   });
 
 
@@ -99,7 +99,7 @@ var nw_kaiser = '<div id="content">'+
       '<h3 id="firstHeading" class="firstHeading">Kaiser Permanente Capitol Hill Medical Center</h3>'+
       'Call: (202) 419-6200</div>';
 
-  var infowindow = new google.maps.InfoWindow({
+  var infowindow2 = new google.maps.InfoWindow({
       content: sw_kaiser
   });
 
@@ -110,7 +110,7 @@ var nw_kaiser = '<div id="content">'+
   });
 
   google.maps.event.addListener(marker1, 'click', function() {
-    infowindow.open(map,marker1);
+    infowindow2.open(map,marker1);
   });
 }
 
