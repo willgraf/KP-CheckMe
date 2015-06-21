@@ -30,8 +30,16 @@ body:after {
   background:#006BA6;
   height: 300px;
   width: 400px;
-  margin-left: 10px;
-  margin-right: 10px;
+}
+
+.c1 {
+    margin-right: 40px;
+    margin-left: 0px;
+}
+
+.c2 {
+    margin-left: 40px;
+    margin-right: 0px;
 }
 
 .home {
