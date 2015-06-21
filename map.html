@@ -18,7 +18,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 19
+    zoom: 17
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -32,14 +32,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Current Location'
       });
-
-       var marker_current = new google.maps.Marker({
-      position: pos,
-      map: map,
-      title: 'Current Location'
-  });
 
       map.setCenter(pos);
     }, function() {
@@ -49,11 +42,6 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-
-
-  google.maps.event.addListener(marker_current, 'click', function() {
-    infowindow.open(map,marker_current);
-  });
 
 
 /*NORTHWEST KAISER*/
@@ -98,7 +86,7 @@ var nw_kaiser = '<div id="content">'+
   google.maps.event.addListener(marker1, 'click', function() {
     infowindow.open(map,marker1);
   });
-  /*Southwest KAISER*/
+  /*NORTHWEST KAISER*/
 
 }
 
