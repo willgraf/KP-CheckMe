@@ -1,3 +1,80 @@
+/* START NAVBAR */
+nav {
+  width: 70%;
+  margin: 0 auto;
+}
+
+nav .menu {
+  height: 60px;
+  background: #36363f;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* center the li */
+}
+
+nav .menu li {
+  display: inline-block; 
+}
+
+nav .menu li a {
+  font-family: arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 60px;
+  vertical-align: middle;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+nav .menu li:hover > a {
+  background: #25252B;
+  transition: all 0.5s;
+  color: #ccc;
+}
+
+/* sub-menus */
+
+.menu li > ul {
+  position: absolute;
+  margin-left: -2.21%;
+  display: none;
+  animation: slide 0.1s linear 0s normal;
+}
+
+.menu li > ul > li {
+  display: block;
+  background: #25252b;
+  border-top: 1px solid #25252f;
+}
+
+.menu li > ul > li > a {
+  display: block;
+  padding: 5px 12px;
+}
+
+.menu li:hover > ul {
+  display: block;
+  animation: slide 0.1s linear 0s normal;
+}
+
+.menu li:hover > ul li:hover > a {
+  background: #18181F;
+}
+
+
+
+@keyframes slide {
+  from  { transform: rotateY(35deg) skewX(10deg); }
+  to     { transform: rotateY(0deg) skewX(0deg); }
+}
+
+
+
+
+
+
 body:after {
             content: "";
             background-image:url('../img/bg.jpg');
@@ -35,17 +112,6 @@ body:after {
 }
 
 .home {
-  min-height: 100%;  /* Fallback for vh unit */
-  min-height: 100vh; /* You might also want to use
-                        'height' property instead.
-                        
-                        Note that for percentage values of
-                        'height' or 'min-height' properties,
-                        the 'height' of the parent element
-                        should be specified explicitly.
-  
-                        In this case the parent of '.vertical-center'
-                        is the <body> element */
 
   /* Make it a flex container */
   display: -webkit-box;
@@ -61,9 +127,6 @@ body:after {
        -ms-flex-align : center;
           align-items : center;
   
-  /* In legacy web browsers such as Firefox 9
-     we need to specify the width of the flex container */
-  width: 100%;
   
   /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
      hence the bootstrap's container won't be aligned to the center anymore.
