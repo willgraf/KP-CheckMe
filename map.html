@@ -29,22 +29,31 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow2 = new google.maps.InfoWindow({
+      /*var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
         content: 'Current Location'
-      });
+      });*/
 
-      var marker_current = new google.maps.Marker({
+        var blah_kaiser = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Current</h3>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: blah_kaiser
+  });
+
+  var marker2 = new google.maps.Marker({
       position: pos,
       map: map,
-      title: 'Current'
+      title: 'Current Location'
   });
 
-      google.maps.event.addListener(marker_current, 'click', function() {
-    infowindow2.open(map,marker_current);
+  google.maps.event.addListener(marker2, 'click', function() {
+    infowindow.open(map,marker2);
   });
-
 
       map.setCenter(pos);
     }, function() {
@@ -54,6 +63,9 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+
+
 
 
 var nw_kaiser = '<div id="content">'+
@@ -75,6 +87,7 @@ var nw_kaiser = '<div id="content">'+
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
+
 
 
   var sw_kaiser = '<div id="content">'+
