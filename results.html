@@ -218,7 +218,7 @@
   </div>
 
 
-<div class="form-container results" style="margin-top:100px; width:700px !important;">
+<div class="form-container results" style="margin-top:50px; width:700px !important;">
   <h3 style="text-align:center; color:white;">Diagnosis</h3>
   <hr>
   <input style="text-align:center;" id="results_final" type="text" name="results_final" class="input" value="" readonly/>
@@ -227,6 +227,8 @@
     <hr>
      <input style="text-align:center;" id="location" type="text" name="location" class="input" value="" readonly/>
       <input style="text-align:center;" id="phone_num" type="text" name="phone_num" class="input" value="" readonly/>
+      <input type="submit" id="submit" class="input-submit" onclick="process()" value="Check Map!" />
+
 
 
   </div>
@@ -917,7 +919,7 @@ function process() {
 
   }
   else{
-    document.getElementById("results_final").value = "You may have allergies!";
+    document.getElementById("results_final").value = "You may have allergies";
      document.getElementById("location").value = "Get some rest!";
   document.getElementById("phone_num").value = "Please consider taking antihistamines";
 

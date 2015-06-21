@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: url('../fonts/lato/lato-light.eot?') format('eot'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url('../fonts/lato/lato-regular.eot?') format('eot'), url('../fonts/lato/lato-regular.woff') format('woff'), url('../fonts/lato/lato-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    src: url('../fonts/lato/lato-bold.eot?') format('eot'), url('../fonts/lato/lato-bold.woff') format('woff'), url('../fonts/lato/lato-bold.ttf') format('truetype');
+}
+
+* {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+body, html {
+	padding: 0;
+	margin: 0;
+	background: #F6F6F6;
+}
+
+.navbar-default {
+	background: transparent !important;
+	border: none;
+}
+
+.navbar-default .navbar-brand {
+	background-image: url('../img/logo.png');
+	background-size: 80% auto;
+	background-position: right center;
+	background-repeat: no-repeat;
+	width: 110px;
+}
+
+.map-container {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.map-container #map {
+	height: 100%;
+	height: 200px;
+	width: 100%;
+}
+
+.content {
+	padding-top: 200px;
+	max-width: 900px;
+	width: 100%;
+	margin: 30px auto;
+	margin-bottom: 0;
+}
+
+.content .row {
+	margin: 0 20px;
+}
+
+.content .row .col-md-6 {
+	margin-bottom: 30px;
+}
+
+.content .pikup-section .box {
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	background: #FFF;
+}
+
+.content .pikup-section .box .title {
+	font-size: 25px;
+	line-height: 100%;
+	padding: 20px;
+	font-weight: 400;
+	border-bottom: 1px solid #F1F0EE;
+}
+
+.content .pikup-section .box .list {
+}
+
+.content .pikup-section .box .list > .item {
+	position: relative;
+	min-height: 125px;
+	border-bottom: 1px solid #F1F0EE;
+	padding: 20px;
+}
+
+.content .pikup-section .box .list > .item:last-child {
+	border-bottom: 0;
+}
+
+.content .pikup-section .box .list > .item .picture {
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+}
+
+.content .pikup-section .box .list > .item .info {
+	padding-left: 140px;
+	display: table;
+	height: 125px;
+	padding-right: 50px;
+	width: 100%;
+}
+
+.content .pikup-section .box .list > .item .info .cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content .pikup-section .box .list > .item .info .cell .name {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 100%;
+	margin-bottom: 3px;
+}
+
+.content .pikup-section .box .list > .item .info .cell .amount {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 100%;
+	margin-bottom: 5px;
+}
+
+.content .pikup-section .box .list > .item .info .cell .address {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 100%;
+	margin-bottom: 5px;
+}
+
+.content .pikup-section .box .list > .item .info .cell .time {
+	font-weight: 300;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.content .pikup-section .box .list > .item .info .cell .time i {
+	margin-right: 5px;
+}
+
+.content .pikup-section .box .list > .item .buttons {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+}
+
+.content .pikup-section .box .list > .item .buttons > .item {
+	font-size: 40px;
+	line-height: 62.5px;
+	cursor: pointer;	
+}
+
+.content .pikup-section .box .list > .item .message-container {
+	margin-top: 10px;
+}
+
+.content .pikup-section .box .list > .item .message-container textarea {
+	width: 100%;
+	border-radius: 3px;
+	border-color: #CCC;
+	resize: none;
+}
+
+.modal {
+	z-index: 1050 !important;
+	overflow: hidden !important;
+	background-color: #FFF !important;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	outline: 0 !important;
+	width: 25%;
+	height: 200px;
+	margin: 0;
+	position: absolute;
+	top: 25%;
+	left: 40%;
+}
+
+.modal .modal-header h3 {
+	margin: 0;
+}
+
+.modal .modal-body input {
+	width: 100%;
+	box-shadow: none;
+}
