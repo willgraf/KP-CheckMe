@@ -18,7 +18,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 6
+    zoom: 10
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -82,7 +82,7 @@ var nw_kaiser = '<div id="content">'+
       title: 'Kaiser Permanente Capitol Hill Medical Center'
   });
 
-  google.maps.event.addListener(marker, 'click', function() {
+  google.maps.event.addListener(marker1, 'click', function() {
     infowindow.open(map,marker1);
   });
 }
